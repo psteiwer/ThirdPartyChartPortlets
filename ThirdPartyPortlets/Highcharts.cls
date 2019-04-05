@@ -1,4 +1,4 @@
-Class ThirdPartyPortlets.Highcharts Extends %DeepSee.Component.Portlet.abstractPortlet
+Class ThirdPartyChartPortlets.Highcharts Extends %DeepSee.Component.Portlet.abstractPortlet
 {
 
 Method %DrawHTML()
