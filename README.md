@@ -1,1 +1,1 @@
-# ThirdPartyPortlets
+# ThirdPartyChartPortlets
