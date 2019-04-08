@@ -5,6 +5,9 @@ This project hosts a collection of Portlets for third-party charting libraries. 
 ### Currently supports
 - Highcharts
 
+### All Highcharts Example Dashboard
+![All Highcharts](https://github.com/psteiwer/ThirdPartyChartPortlets/blob/master/Assets/Highcharts/AllHighcharts.PNG)
+
 ## Installation
 ### Installation with Samples
 1. Use the Download ZIP option for this project
