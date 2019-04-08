@@ -5,6 +5,10 @@ This project hosts a collection of Portlets for third-party charting libraries. 
 ### Currently supports
 - Highcharts
 
+### View the wiki!
+- The wiki contains additional pictures and information about the different chart types
+- [View the wiki here](https://github.com/psteiwer/ThirdPartyChartPortlets/wiki)
+
 ### All Highcharts Example Dashboard
 ![All Highcharts](https://github.com/psteiwer/ThirdPartyChartPortlets/blob/master/Assets/Highcharts/AllHighcharts.PNG)
 
