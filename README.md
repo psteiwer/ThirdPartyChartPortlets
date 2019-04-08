@@ -2,6 +2,9 @@
 
 This project hosts a collection of Portlets for third-party charting libraries. These portlets can be used inside of dashboards as an alternate way of rendering data. Either select a portlet for a charting library you are familiar with or one that has a set of charts you would like to use. Additional, the portlets can be used as examples for implementing other third-party charting libraries.
 
+### Currently supports
+- Highcharts
+
 ## Installation
 ### Installation with Samples
 1. Use the Download ZIP option for this project
