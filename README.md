@@ -20,7 +20,8 @@ This project hosts a collection of Portlets for third-party charting libraries. 
 3. Open terminal and ZN to desired namespace
 4. Run the following commands:
 ```
-   do $system.OBJ.LoadDir("<PATH FROM STEP 2>","ck",,1)
+	set path=<PATH FROM STEP 2>
+	do $system.OBJ.LoadDir(path,"ck",,1)
 ```
 5. From the Management Portal, navigate to DeepSee/Analytics->User Portal
 6. Under the "Widgets" section, find the Sample Dashboards.
@@ -34,9 +35,10 @@ This project hosts a collection of Portlets for third-party charting libraries. 
 3. Selectively import portlets of your choice, or all
     * If importing all
     ```
-        do $system.OBJ.LoadDir("<PATH FROM STEP 2>\ThirdPartyChartPortlets","ck",,1)
+	set path=<PATH FROM STEP 2>	
+	do $system.OBJ.LoadDir(path_"\ThirdPartyChartPortlets","ck",,1)
     ```
     * If selectively importing, navigate to the copied path before -> ThirdPartyChartPortlets -> Pick the library of your choice
     ```
-        do $system.OBJ.Load("<FULL PATH TO .CLS FILE>","ck")
+	do $system.OBJ.Load("<FULL PATH TO .CLS FILE>","ck")
     ```
