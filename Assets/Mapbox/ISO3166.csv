@@ -1,0 +1,18 @@
+%%NAME,ISO3166
+%%CAPTION,ISO 3166 translations
+%%PATTERN,[Outlet].[H1].[Country].[*]
+%%MODDATE,2020-04-15 16:56:31
+BE,Belgium
+BR,Brasil
+CA,Canada
+CH,China
+CL,Chile
+DE,Germany
+FR,France
+GB,England
+IN,India
+IT,Italy
+JP,Japan
+NL,Netherlands
+SP,Spain
+US,USA
