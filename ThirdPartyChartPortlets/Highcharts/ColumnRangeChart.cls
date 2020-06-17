@@ -1,5 +1,9 @@
-Class ThirdPartyChartPortlets.Highcharts.ColumnRangeChart Extends ThirdPartyChartPortlets.Highcharts.Highcharts
+Class ThirdPartyChartPortlets.Highcharts.ColumnRangeChart Extends ThirdPartyChartPortlets.Highcharts.Base
 {
+
+Parameter DisplayName = "Column Range";
+
+Parameter ChartType = "columnrange";
 
 ClientMethod drawChart(resultSet, containingid) [ Language = javascript ]
 {
@@ -24,7 +28,7 @@ ClientMethod drawChart(resultSet, containingid) [ Language = javascript ]
 		rowlabels[i] = resultSet.getLabel(i,1).toString().split("/")[0];
 	}
 
-	var hcType = this.getChartType(document.getElementById(containingid+"/settings/chartType").value);
+	var hcType = this.GetChartType(document.getElementById(containingid+"/settings/chartType").value);
 	
 	// initialize the variable to hold onto all the DeepSee data which is in a 2D array
 	var chartData = [];

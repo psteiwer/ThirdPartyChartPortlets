@@ -1,9 +1,9 @@
-Class ThirdPartyChartPortlets.Highcharts.ScatterChart Extends ThirdPartyChartPortlets.Highcharts.Base
+Class ThirdPartyChartPortlets.Highcharts.Base Extends %ZEN.Component.component
 {
 
-Parameter DisplayName = "Scatter";
+Parameter DisplayName = "Undefined";
 
-Parameter ChartType = "scatter";
+Parameter ChartType = "Undefined";
 
 ClientMethod drawChart(resultSet, containingid) [ Language = javascript ]
 {

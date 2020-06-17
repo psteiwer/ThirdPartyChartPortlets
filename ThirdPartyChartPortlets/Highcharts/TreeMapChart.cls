@@ -1,5 +1,9 @@
-Class ThirdPartyChartPortlets.Highcharts.TreeMapChart Extends ThirdPartyChartPortlets.Highcharts.Highcharts
+Class ThirdPartyChartPortlets.Highcharts.TreeMapChart Extends ThirdPartyChartPortlets.Highcharts.Base
 {
+
+Parameter DisplayName = "Tree Map";
+
+Parameter ChartType = "treemap";
 
 ClientMethod drawChart(resultSet, containingid) [ Language = javascript ]
 {
@@ -26,7 +30,7 @@ ClientMethod drawChart(resultSet, containingid) [ Language = javascript ]
 
 	var hcTitle = document.getElementById(containingid+"/settings/titlehc").value;
 	var hcSubtitle = document.getElementById(containingid+"/settings/subtitle").value;
-	var hcType = this.getChartType(document.getElementById(containingid+"/settings/chartType").value);
+	var hcType = this.GetChartType(document.getElementById(containingid+"/settings/chartType").value);
 
     // case that the query is a CROSSJOIN AND TREEMAP
     // call method to construct the TREEMAP
