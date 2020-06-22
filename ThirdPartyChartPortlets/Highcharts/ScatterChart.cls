@@ -78,6 +78,9 @@ ClientMethod drawChart(resultSet, containingid) [ Language = javascript ]
 	} else {
 		hcInvert = true;
 	}
+
+	// FUNCTIONALITY FOR LOGARITHMIC Y AXIS
+	var hcYAxisType = document.getElementById(containingid+"/settings/yAxisType").value;
  
 	// FUNCTIONALITY FOR STACKING
 	// hcStack.checked == false if checkbox not checked, true if checked

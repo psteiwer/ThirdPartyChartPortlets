@@ -26,6 +26,7 @@ Method DrawSettings()
 	&html<<input id="#(..%EnclosingDivId())#/settings/invert" type='hidden' value='#(..settings("invert"))#'>  </input>>
 	&html<<input id="#(..%EnclosingDivId())#/settings/3d" type='hidden' value='#(..settings("3d"))#'>  </input>>
 	&html<<input id="#(..%EnclosingDivId())#/settings/stack" type='hidden' value='#(..settings("stack"))#'>  </input>>
+	&html<<input id="#(..%EnclosingDivId())#/settings/yAxisType" type='hidden' value='#(..settings("yAxisType"))#'>  </input>>
 	&html<<input id="#(..%EnclosingDivId())#/settings/titlehc" type='hidden' value='#(..settings("titlehc"))#'>  </input>>
 	&html<<input id="#(..%EnclosingDivId())#/settings/subtitle" type='hidden' value='#(..settings("subtitle"))#'>  </input>>
 	&html<<input id="#(..%EnclosingDivId())#/settings/xaxis" type='hidden' value='#(..settings("xaxis"))#'>  </input>>
@@ -98,7 +99,8 @@ ClassMethod %OnGetPortletSettings(Output pInfo As %List, ByRef pSettings) As %St
   set pInfo($I(pInfo)) = $LB("invert","0","%Boolean","Invert Axis","Invert the x-y axis")
   set pInfo($I(pInfo)) = $LB("3d","0","%Boolean","3D","Display in 3D")
   set pInfo($I(pInfo)) = $LB("stack","0","%Boolean","Stack","Stack the data")
-  
+
+  set pInfo($I(pInfo)) = $LB("yAxisType","linear","ENUM^Linear:linear, Logarithmic:logarithmic","Y Axis Type","Y Axis scale type")
   set pInfo($I(pInfo)) = $LB("zoomType","","ENUM^None:noZoom, X:x, Y:y, X-Y:xy","Zoom","Select the type of zoom")
   
   set pInfo($I(pInfo)) = $LB("titlehc","","%String","Title","Insert title here")
