@@ -122,6 +122,7 @@ ClientMethod drawChart(resultSet, containingid) [ Language = javascript ]
 			title: {
 				text: hcYaxis,
 			},
+			type: hcYAxisType,
 			plotBands: this.hcPlotBands
 		},
 		legend: {
