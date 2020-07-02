@@ -13,8 +13,8 @@ Method %DrawHTML()
 
 Method DrawSRCs()
 {
-	&html<<script type='text/javascript' src="http://code.highcharts.com/highcharts.js"></script>>
-	&html<<script type='text/javascript' src="http://code.highcharts.com/highcharts-more.js"></script>>
+	&html<<script type='text/javascript' src="https://code.highcharts.com/highcharts.js"></script>>
+	&html<<script type='text/javascript' src="https://code.highcharts.com/highcharts-more.js"></script>>
 	&html<<script type='text/javascript' src="https://code.highcharts.com/highcharts-3d.js"></script>>
 	&html<<script type='text/javascript' src="https://code.highcharts.com/modules/heatmap.js"></script>>
 	&html<<script type='text/javascript' src="https://code.highcharts.com/modules/treemap.js"></script>>
