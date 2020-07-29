@@ -17,10 +17,10 @@ ClientMethod drawChart(resultSet, containingid) [ Language = javascript ]
 	// adjusts the opacity of Highcharts
 	// document.getElementById("chartdiv").style.opacity = document.getElementById("opacity").value;
 
-	var collables = [];
-	// retrieve column labels, store into collables array - access length by .length
+	var collabels = [];
+	// retrieve column labels, store into collabels array - access length by .length
 	for (var j = 0; j < resultSet.getDimSize(2); ++j) {
-		collables[j] = resultSet.getLabel(j,2).split("/")[0];
+		collabels[j] = resultSet.getLabel(j,2).split("/")[0];
 	}
 
 	var rowlabels = [];
@@ -46,12 +46,12 @@ ClientMethod drawChart(resultSet, containingid) [ Language = javascript ]
 	}
 
 	// prepare the data to feed into Highcharts template
-	// collables contains the names for the series, rowlabels were the categories going onto the axis
+	// collabels contains the names for the series, rowlabels were the categories going onto the axis
 	// create data_series array to format the data for Highcharts
 	var data_series = [];
 	for (var i = 0; i < chartData.length; i++) {
 		var new_data = {};
-		new_data.name = collables[i];
+		new_data.name = collabels[i];
 		new_data.data = chartData[i];
 
 		data_series.push(new_data);

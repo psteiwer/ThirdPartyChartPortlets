@@ -17,10 +17,10 @@ ClientMethod drawChart(resultSet, containingid) [ Language = javascript ]
 	// adjusts the opacity of Highcharts
 	// document.getElementById("chartdiv").style.opacity = document.getElementById("opacity").value;
 
-	var collables = [];
-	// retrieve column labels, store into collables array - access length by .length
+	var collabels = [];
+	// retrieve column labels, store into collabels array - access length by .length
 	for (var j = 0; j < resultSet.getDimSize(2); ++j) {
-		collables[j] = resultSet.getLabel(j,2).split("/")[0];
+		collabels[j] = resultSet.getLabel(j,2).split("/")[0];
 	}
 
 	var rowlabels = [];
@@ -36,7 +36,7 @@ ClientMethod drawChart(resultSet, containingid) [ Language = javascript ]
     // call method to construct the TREEMAP
 
     // chartData now holds TREE for TREEMAP
-    var chartData = ThirdPartyChartPortlets_Highcharts_TreeMapChart_buildTreemap(collables, rowlabels, resultSet);
+    var chartData = ThirdPartyChartPortlets_Highcharts_TreeMapChart_buildTreemap(collabels, rowlabels, resultSet);
 
     // dataLabels and levelIsConstnat and levels needed for proper labels to show up
     Highcharts.chart(containingid+"/chartdiv", {
