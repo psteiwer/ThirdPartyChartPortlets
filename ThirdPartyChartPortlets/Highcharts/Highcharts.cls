@@ -53,7 +53,7 @@ ClientMethod renderContents() [ Language = javascript ]
         controller = this.getController();
     }
     if (controller) {
-	    this.dispatchDrawChart(controller,this.id);
+	    this.dispatchDrawChart(controller,this.id,this);
         html[html.length] = controller;
     }
     else {
@@ -77,14 +77,19 @@ Method GetChartType(chartType) As %String [ ZenMethod ]
 	Quit $Parameter("ThirdPartyChartPortlets.Highcharts."_chartType,"ChartType")
 }
 
-ClientMethod dispatchDrawChart(resultSet, containingid) [ Language = javascript ]
+ClientMethod dispatchDrawChart(resultSet, containingid, newThis) [ Language = javascript ]
 {
+	if ((resultSet.queryComplete!=100)||(resultSet.queryPending)) {
+		setTimeout(newThis.dispatchDrawChart,1000,resultSet,containingid,newThis)
+		return
+	}
+		
 	var chartType=document.getElementById(containingid+"/settings/chartType").value;
 	
 	// Dynamically call drawChart for selected chart type.
 	var drawFunction=new Function("return ThirdPartyChartPortlets_Highcharts_"+chartType+"_drawChart");
 	drawFunction=drawFunction.call();
-	drawFunction.call(this,resultSet,containingid);
+	drawFunction.call(newThis,resultSet,containingid);
 	
 	return;
 }
