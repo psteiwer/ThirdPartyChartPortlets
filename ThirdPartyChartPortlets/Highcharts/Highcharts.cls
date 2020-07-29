@@ -147,7 +147,6 @@ ClientMethod onApplyFilters(refresh, widget) [ Language = javascript ]
 /// Subclass can implement this, if they wish.
 ClientMethod adjustContentSize(load, width, height) [ Language = javascript ]
 {
-	console.log("getelement 6");
 	var div=document.getElementById(this.id+"/chartdiv")
 	div.style.width=width.toString()+"px"
 	div.style.height=height.toString()+"px"
