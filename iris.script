@@ -1,0 +1,11 @@
+    zn "%SYS"
+    Do ##class(Security.Users).UnExpireUserPasswords("*")
+
+    zn "USER"
+    do EnableDeepSee^%SYS.cspServer("/csp/user/")
+    
+    ; install samples-bi to have cubes with test data
+    zpm "install samples-bi"
+
+    ; load app
+    zpm "load /opt/irisapp"

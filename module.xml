@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Export generator="Cache" version="25">
+  <Document name="thirdpartychartportlets.ZPM">
+    <Module>
+      <Name>thirdpartychartportlets</Name>
+      <Description>Sample portlets for implementing charts from third party libraries in IRIS BI</Description>
+      <Version>0.0.1</Version>
+      <Packaging>module</Packaging>
+      <Resource Name="ThirdPartyChartPortlets.PKG"/>
+      <Resource Name="Samples.PKG"/>
+      <Invoke Class="%DeepSee.TermList" Method="%ImportCSV">
+        <Arg>${root}Assets/Mapbox/ISO3116.csv</Arg>
+      </Invoke>
+    </Module>
+  </Document>
+</Export>
