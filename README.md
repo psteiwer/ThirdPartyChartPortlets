@@ -16,7 +16,15 @@ This project hosts a collection of Portlets for third-party charting libraries. 
 - Please see the Wiki for ![Implementing New Chart Types](https://github.com/psteiwer/ThirdPartyChartPortlets/wiki#implementing-new-chart-types)
 
 ## Installation
-### Installation with Samples
+### ZPM - Does not contain Samples
+1. ```zpm "install thirdpartychartportlets"```
+2. You can now create new widgets using these portlets with your own data sources
+
+### Docker - Contains Samples
+1. ```docker compose up -d --build```
+2. http://localhost:61773/csp/user/_DeepSee.UserPortal.DashboardViewer.zen?DASHBOARD=Widget%20Examples/All%20HighCharts.dashboard
+
+### Manual Installation with Samples
 1. Use the Download ZIP option for this project
 2. Extract the files and copy path
    * This is the path to the directory that contains README.md and LICENSE
@@ -31,7 +39,7 @@ This project hosts a collection of Portlets for third-party charting libraries. 
     * These will be named with "All <third-party name>"
     * This naming convention is based off of the built-in "All Charts" example
   
-### Installation without Samples
+### Manual Installation without Samples
 1. Use the Download ZIP option for this project
 2. Extract the files and copy path
    * This is the path to the directory that contains README.md and LICENSE

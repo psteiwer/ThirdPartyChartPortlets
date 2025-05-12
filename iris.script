@@ -9,3 +9,6 @@
 
     ; load app
     zpm "load /opt/irisapp"
+
+    Do $system.OBJ.LoadDir("/opt/irisapp/Samples","ck",,1)
+    Do ##class(%DeepSee.TermList).%ImportCSV("/opt/irisapp/Assets/Mapbox/ISO3166.csv")
