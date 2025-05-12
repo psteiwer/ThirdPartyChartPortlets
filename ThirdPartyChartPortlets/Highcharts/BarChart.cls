@@ -40,7 +40,10 @@ ClientMethod drawChart(resultSet, containingid) [ Language = javascript ]
 			if(chartDataPoint == ""){
 				chartDataPoint = 0;
 			}
-			cat_data.push(chartDataPoint);
+			cat_data.push({
+				y: chartDataPoint,
+				originalCell: { row: i, col: j }
+			});
 		}
 		chartData.push(cat_data);
 	}
@@ -132,8 +135,20 @@ ClientMethod drawChart(resultSet, containingid) [ Language = javascript ]
 			pointFormat: '{point.category}: {point.y}'
 		},
 		plotOptions: {
-			series:{
-				stacking: hcStack
+			series: {
+				stacking: hcStack,
+				point: {
+					events: {
+						click: function () {
+							var row = this.originalCell.row;
+							var col = this.originalCell.col;
+
+							var filter = resultSet.getFilterForCells(row+1, col+1);
+							var widget=zenPage.getComponentById(containingid.split("/")[0]);
+							widget.currFilterSpec=filter;
+						}
+					}
+				}
 			},
 			columnrange: colrange_plotoptions
 		},
