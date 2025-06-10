@@ -102,6 +102,8 @@ ClientMethod drawChart(resultSet, containingid) [ Language = javascript ]
 		hc3d = {};
 	}
 
+	var selectedPoint = null;
+
 	var myChart = Highcharts.chart(containingid+"/chartdiv", {
 		chart: {
 			type: hcType,
@@ -140,6 +142,20 @@ ClientMethod drawChart(resultSet, containingid) [ Language = javascript ]
 				point: {
 					events: {
 						click: function () {
+							// Apply style to the selected bar
+							if (selectedPoint) {
+								selectedPoint.update({
+									borderWidth: 0,
+									borderColor: null
+								}, false);
+							}
+							this.update({
+								borderWidth: 3,
+								borderColor: '#000000'
+							}, false);
+							selectedPoint = this;
+							this.series.chart.redraw();
+
 							var row = this.originalCell.row;
 							var col = this.originalCell.col;
 
