@@ -27,8 +27,12 @@ ClientMethod renderContents() [ Language = javascript ]
         controller = this.getController();
     }
     if (controller) {
-	    this.drawChart(controller,this.id);
-        html[html.length] = controller;
+        try {
+	        this.drawChart(controller,this.id);
+            html[html.length] = controller;
+        } catch (error) {
+            //html[html.length] = "";
+        }
     }
     else {
         html[html.length] = 'No data source';
