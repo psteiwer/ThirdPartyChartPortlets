@@ -32,9 +32,9 @@ ClientMethod drawChart(resultSet, containingid) [ Language = javascript ]
 
 			data.push({
 				name: label,
-				y: value
+				y: value,
+				originalCell: { row: i, col: j }
 			});
-
 		}
 	}
 
@@ -63,6 +63,17 @@ ClientMethod drawChart(resultSet, containingid) [ Language = javascript ]
 				dataLabels: {
 					enabled: true,
 					format: '<b>{point.name}</b>: {point.percentage:.1f} %'
+				},
+				point: {
+					events: {
+						click: function () {
+							var row = this.originalCell.row;
+							var col = this.originalCell.col;
+							var filter = resultSet.getFilterForCells(row + 1, col + 1);
+							var widget = zenPage.getComponentById(containingid.split("/")[0]);
+							widget.currFilterSpec = filter;
+						}
+					}
 				}
 			}
 		},
