@@ -4,7 +4,7 @@
     <Module>
       <Name>thirdpartychartportlets</Name>
       <Description>Sample portlets for implementing charts from third party libraries in IRIS BI</Description>
-      <Version>1.0.1</Version>
+      <Version>1.0.2</Version>
       <Packaging>module</Packaging>
       <Resource Name="ThirdPartyChartPortlets.PKG"/>
     </Module>
